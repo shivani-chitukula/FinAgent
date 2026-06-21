@@ -25,6 +25,14 @@ A production-grade **multi-agent banking assistant** built with LangGraph, FastA
 
 ---
 
+
+## 🏗️ Architecture
+
+<img width="1562" height="901" alt="image" src="https://github.com/user-attachments/assets/3fb166c7-951e-4751-b378-4cbb7aa27001" />
+
+---
+
+
 ## 🧠 Agent Pipeline
 
 | Agent | Role |
@@ -220,6 +228,51 @@ Returns all active session IDs.
 { "sessions": ["abc123", "xyz789"] }
 ```
 
+## 🗄️ Database
+
+The PostgreSQL schema covers core banking domain tables:
+
+```text
+users · accounts · transactions · sessions · auth_tokens · audit_logs
+```
+
+Two connection roles are used:
+
+| Variable | Role | Used by |
+|---|---|---|
+| `DATABASE_URL` | Write-capable user | Account creation, transfers, auth |
+| `READ_DATABASE_URL` | `read_only` (SELECT only) | Balance checks, history retrieval |
+
+Init scripts in `alembic/versions/` run in order on first start.
+To apply migrations:
+
+```bash
+alembic upgrade head
+```
+
+Redis handles session caching and OTP token storage with automatic in-memory fallback if Redis is unavailable:
+
+```env
+REDIS_URL=redis://localhost:6379
+```
+
+---
+
+## 📊 Observability
+
+All LLM calls are traced via **LangSmith**. Set the following in your `.env` to enable full tracing including token counts, latencies, and per-node agent state:
+
+```env
+LANGSMITH_API_KEY=your_key
+LANGSMITH_PROJECT=FinAgent
+LANGSMITH_TRACING=true
+```
+
+Traces are visible at [smith.langchain.com](https://smith.langchain.com) under the `FinAgent` project. Each agent node logs:
+- Intent classification result
+- Tool call inputs and outputs
+- Token consumption per LLM call
+- End-to-end latency per session
 ---
 
 ## 📊 Results
