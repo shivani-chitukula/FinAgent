@@ -1,0 +1,40 @@
+# 🐍 Python / Backend
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/venv/
+**/.venv/
+**/.pytest_cache/
+**/.mypy_cache/
+**/*.db
+**/*.sqlite3
+**/*.log
+backend/debug_auth.log
+
+# 📦 Node / Frontend
+**/node_modules/
+**/dist/
+**/dist-ssr/
+
+# 🔒 Environment configurations & Secrets
+**/.env
+**/.env.local
+**/.env.*.local
+**/*.secret
+**/*.local
+
+# 🖥️ OS Specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# 🛠️ Editors and IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,20 @@
+/* .message-list {
+  min-height: 300px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow-y: auto;
+  background-color: #f1f1f1;
+}
+
+.message {
+  margin: 0.5rem 0;
+}
+
+.message.user {
+  text-align: right;
+}
+
+.message.bot {
+  text-align: left;
+} */

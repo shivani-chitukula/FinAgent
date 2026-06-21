@@ -1,0 +1,21 @@
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message-input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  resize: none;
+}
+
+.send-button {
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+}
