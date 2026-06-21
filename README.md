@@ -275,6 +275,31 @@ Traces are visible at [smith.langchain.com](https://smith.langchain.com) under t
 - End-to-end latency per session
 ---
 
+## UI Preview
+
+## Create Account:
+
+<img width="1918" height="911" alt="image" src="https://github.com/user-attachments/assets/d8bc5380-36b2-4706-a1aa-3ba5a90103d2" />
+
+---
+## Update Account
+
+<img width="1911" height="905" alt="image" src="https://github.com/user-attachments/assets/d4bc9975-e704-4986-9d76-7d05fa0fa9b2" />
+
+
+---
+## Transfer Money
+
+<img width="1918" height="906" alt="image" src="https://github.com/user-attachments/assets/b8e87934-bbd7-4a33-b988-6a10d7612a86" />
+
+---
+## Support Queries
+
+<img width="1918" height="912" alt="image" src="https://github.com/user-attachments/assets/1781c7a4-3be8-451a-9b0f-7cb76f064242" />
+
+---
+
+
 ## 📊 Results
 
 | Metric | Result |
